@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Page</title>
+        <style type="text/css">
+            body {
+                background-color: black;
+            }
+
+            .one{
+                padding: 100px;  
+            }
+            .two{
+                margin-top: 100px;
+                margin-left: 100px;
+                
+            }
+            .three{
+                border-width: 1px;
+                border-radius: 40%;
+                width: 1500px;
+                height: 600px;
+                background-color: lightslategray;
+                margin-left: 150px;
+                margin-top: 150px;
+            }
+            .four{
+                padding: 40px;  
+                margin-left: 150px;
+
+            }
+            .circle {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #000;
+                position: absolute;
+                border-radius: 15px;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+             document.onmousemove = animateCircles;
+            
+            function animateCircles (event){
+                var circle = document.createElement("div");
+                circle.setAttribute("class","circle");
+                document.body.appendChild(circle);
+                
+                circle.style.left = event.clientX + "px";
+                circle.style.top = event.clientY + "px";
+
+                circle.style.transition = "all 0.5s linear 0s";
+                
+                circle.style.left = circle.offsetLeft - 20 + "px";
+                circle.style.top = circle.offsetTop - 20 + "px";
+
+                circle.style.width = "50px";
+                circle.style.height = "50px";
+                circle.style.borderWidth="5px";
+                circle.style.opacity = 0;
+               
+            } 
+             
+        </script>
+        <div class="one">
+            <h1 style="color: white;font-size: 80px;margin: 40px;">Sharad Patle</h1>
+        </div>
+        <div class="two">
+            <h1 style="color: lightgray;margin-left: 40px;font-size: 40px;width: 800px;height: 100px;">I am interested to do web and mobile development. I learned react js and react native for web and mobile development.</h1>            
+        </div>
+        <div class="three">
+            <h1 style = "margin: 90px;padding-top: 130px;color: black;">Experience</h1>
+            <div style="margin-left: 40px;">
+                <h1 style="color: black;">Ownacar<br>24 March to 31 May</h1>
+            </div>
+            <div style="margin-left: 400px;margin-bottom: 200px;">
+                <h1 style="color: black;">My role in previous company mobile development and I made there one application that is control all Ownacar.in website data  </h1>
+            </div>
+        </div>
+        <div class="four">
+            <h1 style="color: azure;">You can follow me on Email :- sharadpatle10@gmail.com</h1>
+        </div>
+    </body>
+</html>
